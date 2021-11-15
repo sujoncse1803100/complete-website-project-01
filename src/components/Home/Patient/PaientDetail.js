@@ -1,8 +1,15 @@
 import React from 'react';
 
 const PaientDetail = ({ patinet }) => {
+
+    const styles = {
+        boxSizing: 'boder-box',
+        padding: '5px',
+        boxShadow: '2px 5px 5px 1px  gray'
+    }
+
     return (
-        <div className="col-md-4 p-2">
+        <div style={styles} className="col-md-3 p-2">
             <p >{patinet.comment}</p>
             <div className="d-flex mt-5">
                 <img src={patinet.image} alt="" />

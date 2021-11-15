@@ -31,7 +31,7 @@ const Patient = () => {
             <div className="container">
                 <h5 style={{ color: '#1CC7C1' }}>TESTIMONIAL</h5>
                 <h2>What's Out Patient <br /> Says</h2>
-                <div className="row pt-5 mb-5">
+                <div className="row pt-5 mb-5 d-flex justify-content-between">
                     {
                         patinet.map(p => <PaientDetail key={p.id} patinet={p} />)
                     }
