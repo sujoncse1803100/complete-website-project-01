@@ -4,6 +4,7 @@ import Blog from '../Blog/Blog';
 import Contact from '../Contact/Contact';
 import Doctor from '../Doctor/Doctor';
 import FeatureService from '../FeatureService/FeatureService';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Patient from '../Patient/Patient';
 import Services from '../Services/Services';
@@ -19,6 +20,7 @@ const Home = () => {
             <Blog />
             <Doctor />
             <Contact />
+            <Footer />
         </div>
     );
 };
