@@ -1,0 +1,9 @@
+.appoinment-section {
+  background-color: #3e4558;
+  margin-top: 200px;
+  position: relative;
+}
+
+.appoinment-section img {
+  transform: translateY(-130px);
+}
