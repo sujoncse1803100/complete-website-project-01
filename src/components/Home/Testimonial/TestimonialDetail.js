@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PaientDetail = ({ patinet }) => {
+const Testimonial = ({ patinet }) => {
 
     const styles = {
         boxSizing: 'boder-box',
@@ -22,4 +22,4 @@ const PaientDetail = ({ patinet }) => {
     );
 };
 
-export default PaientDetail;
+export default Testimonial;

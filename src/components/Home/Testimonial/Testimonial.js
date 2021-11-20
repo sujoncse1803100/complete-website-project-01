@@ -2,7 +2,7 @@ import React from 'react';
 import ellipse1 from '../../../images/Ellipse 1.png'
 import ellipse2 from '../../../images/Ellipse 2.png'
 import ellipse3 from '../../../images/Ellipse 3.png'
-import PaientDetail from './PaientDetail';
+import Testimonial from './TestimonialDetail';
 
 const patinet = [
     {
@@ -33,7 +33,7 @@ const Patient = () => {
                 <h2>What's Out Patient <br /> Says</h2>
                 <div className="row pt-5 mb-5 d-flex justify-content-between">
                     {
-                        patinet.map(p => <PaientDetail key={p.id} patinet={p} />)
+                        patinet.map(p => <Testimonial key={p.id} patinet={p} />)
                     }
                 </div>
             </div>

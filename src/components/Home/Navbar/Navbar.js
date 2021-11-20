@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 
+
 const NavBar = () => {
     return (
         <div>

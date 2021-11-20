@@ -1,22 +1,26 @@
-import React from 'react';
-import Appoinment from '../Appoinment/Appoinment';
+import React, { useContext } from 'react';
+import MakeAppoinMent from '../MakeAppoinMent/MakeAppoinMent';
 import Blog from '../Blog/Blog';
 import Contact from '../Contact/Contact';
 import Doctor from '../Doctor/Doctor';
 import FeatureService from '../FeatureService/FeatureService';
-import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import Patient from '../Patient/Patient';
+import Testimonial from '../Testimonial/Testimonial';
 import Services from '../Services/Services';
+import Footer from '../Footer/Footer';
+// import { UserContext } from './../../../App';
 
 const Home = () => {
+    // const [userLoggedIn, setUserLoggedIn] = useContext(UserContext);
     return (
         <div>
+            {/* <h2 className="text-center">Email : {userLoggedIn.email}</h2> */}
+
             <Header />
             <Services />
             <FeatureService />
-            <Appoinment />
-            <Patient />
+            <MakeAppoinMent />
+            <Testimonial />
             <Blog />
             <Doctor />
             <Contact />
