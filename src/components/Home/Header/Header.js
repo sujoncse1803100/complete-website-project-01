@@ -5,9 +5,12 @@ import Navbar from '../Navbar/Navbar';
 import './Header.css'
 
 const Header = () => {
+    const color = {
+        color: 'white'
+    }
     return (
         <div className="header-container ">
-            <Navbar />
+            <Navbar color={color} />
             <HeaderMain />
             <BusinessInfo />
         </div>

@@ -6,7 +6,7 @@ import Calendar from 'react-calendar';
 const Dashboard = () => {
     const containerStyle = {
         backgroundColor: '#F4FDFB',
-        height: '100%'
+        height: '100vh'
     }
 
     const [selectedDate, setSelectedDate] = useState(new Date());
@@ -17,9 +17,7 @@ const Dashboard = () => {
 
     }
 
-
     useEffect(() => {
-
         fetch('http://localhost:3001/appoinmentByDate', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
@@ -29,23 +27,25 @@ const Dashboard = () => {
             .then(result => {
                 setAppointments(result);
             })
-
     }, [selectedDate]);
 
     return (
         <section>
-            <div style={containerStyle} className="container-fluid row">
+            <div style={containerStyle} className=" row ">
                 <div className="col-md-2">
                     <Sidebar />
                 </div>
-                <div className="col-md-5">
-                    <h1>Calender</h1>
-                    <Calendar
-                        onChange={handleDateChange}
-                        value={new Date()}
-                    />
+                <div className="col-md-4">
+                    <h6 className="text-start  mb-4">Appoinment</h6>
+                    <div className="text-center">
+                        <Calendar
+                            onChange={handleDateChange}
+                            value={new Date()}
+                            style={{ boder: 'none' }}
+                        />
+                    </div>
                 </div>
-                <div className="col-md-5">
+                <div className="col-md-6 mt-3 pt-4">
                     <AppoinmentByDate appointments={appointments} />
                 </div>
             </div>

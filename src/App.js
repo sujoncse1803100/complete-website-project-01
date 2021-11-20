@@ -8,6 +8,8 @@ import Home from './components/Home/Home/Home';
 import Appoinment from './components/Appoinment/Appoinment/Appoinment';
 import Login from './components/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import NotFound from './components/NotFound/NotFound';
+import AllPatients from './components/AllPatients/AllPatients';
 export const UserContext = createContext();
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+
           <Route exact path="/appoinment">
             <Appoinment />
           </Route>
@@ -28,8 +31,20 @@ function App() {
             <Dashboard />
           </Route>
 
+          <Route exact path="/doctor/appoinments">
+            <Dashboard />
+          </Route>
+
+          <Route exact path="/doctor/patients">
+            <AllPatients />
+          </Route>
+
           <Route path="/login">
             <Login />
+          </Route>
+
+          <Route path="*">
+            <NotFound />
           </Route>
 
         </Switch>

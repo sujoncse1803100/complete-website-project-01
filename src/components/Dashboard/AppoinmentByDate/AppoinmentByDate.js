@@ -1,11 +1,18 @@
 import React from 'react';
+import AppoinmentSortList from '../AppoinmentSortList/AppoinmentSortList';
 
 const AppoinmentByDate = ({ appointments }) => {
+    console.log(appointments);
+
     return (
-        <div>
-            <h3>AppoinmentByDate : {appointments.length}</h3>
+        <div >
             {
-                appointments.map((appointment) => <li>{appointment.name}</li>)
+                appointments.length ?
+                    <AppoinmentSortList appointments={appointments} ></AppoinmentSortList>
+                    :
+                    <div>
+                        <p className="text-center mt-5" >No apoinments Available</p>
+                    </div>
             }
         </div>
     );

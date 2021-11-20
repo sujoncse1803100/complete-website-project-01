@@ -9,9 +9,14 @@ const Appoinment = () => {
     const handleDateChange = date => {
         setSelectedDate(date);
     }
+
+    const color = {
+        color: 'black'
+    }
+
     return (
         <div>
-            <NavBar />
+            <NavBar color={color} />
             <AppoinmentHeader handleDateChange={handleDateChange} />
             <BookAppoinment date={selectedDate} />
             <Footer />
