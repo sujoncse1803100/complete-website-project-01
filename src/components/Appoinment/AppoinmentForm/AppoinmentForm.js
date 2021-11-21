@@ -30,7 +30,7 @@ const AppoinmentForm = ({ modalIsOpen, closeModal, appoinmentOn, date }) => {
         data.date = date;
         data.created = new Date();
 
-        fetch('http://localhost:3001/addAppoinment', {
+        fetch('https://stark-shore-06055.herokuapp.com/addAppoinment', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

@@ -9,7 +9,7 @@ const BloggerDetail = ({ blogger }) => {
     }
 
     return (
-        <div style={styles} className="col-md-3 p-3">
+        <div style={styles} className="col-md-3 col-sm-6 p-3">
             <div className="d-flex">
                 <img style={{ width: '50px', height: '50px' }} src={blogger.image} alt="" />
                 <div className="ms-2">

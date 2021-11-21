@@ -11,7 +11,7 @@ const AllAppoinments = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:3001/patients')
+        fetch('https://stark-shore-06055.herokuapp.com/patients')
             .then(response => response.json())
             .then(result => {
                 setPatients(result);

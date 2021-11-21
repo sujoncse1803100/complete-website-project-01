@@ -6,7 +6,7 @@ import './Header.css'
 
 const Header = () => {
     const color = {
-        color: 'white'
+        color: 'text-white'
     }
     return (
         <div className="header-container ">

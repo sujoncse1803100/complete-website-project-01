@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AppoinmentByDate from '../AppoinmentByDate/AppoinmentByDate';
 import Sidebar from '../Sidebar/Sidebar';
 import Calendar from 'react-calendar';
+import { UserContext } from '../../../App';
 
 const Dashboard = () => {
     const containerStyle = {
@@ -9,6 +10,7 @@ const Dashboard = () => {
         height: '100vh'
     }
 
+    const [userLoggedIn, setUserLoggedIn] = useContext(UserContext);
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [appointments, setAppointments] = useState([]);
 
@@ -18,10 +20,10 @@ const Dashboard = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:3001/appoinmentByDate', {
+        fetch('https://stark-shore-06055.herokuapp.com/appoinmentByDate', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ date: selectedDate })
+            body: JSON.stringify({ date: selectedDate, email: userLoggedIn.email })
         })
             .then(response => response.json())
             .then(result => {

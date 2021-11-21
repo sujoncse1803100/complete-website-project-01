@@ -32,7 +32,7 @@ const Login = () => {
         setUserLoggedIn(res);
         setUser(res);
         if (redirects) {
-            // history.replace(from);
+            history.replace(from);
         }
     }
 
@@ -46,7 +46,7 @@ const Login = () => {
 
     return (
         <div>
-            <h2 className="text-center">Email : {user.email}</h2>
+            {/* <h2 className="text-center">Email : {user.email}</h2> */}
             <main style={{ height: '600px' }} className="row d-flex align-items-center">
                 <div className="col-md-4 offset-md-1 text-center">
                     <h3 className="text-center">Login</h3>
@@ -71,9 +71,9 @@ const Login = () => {
                                 variant="standard"
                                 type="password"
                             />
-                            <div >
+                            {/* <div >
                                 <p style={{ fontSize: '0.5rem' }} className="text-danger text-start">forgot password ?</p>
-                            </div>
+                            </div> */}
                             <button
                                 className="btn bg-light  rounded-pill"
                             >

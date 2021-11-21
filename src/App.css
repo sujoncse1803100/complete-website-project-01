@@ -8,3 +8,9 @@
 .text-brand {
   color: #1cc7c1;
 }
+
+@media only screen and (max-width: 600px) {
+  .navText {
+    color: black !important;
+  }
+}

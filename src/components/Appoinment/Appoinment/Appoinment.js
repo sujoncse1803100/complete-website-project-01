@@ -11,11 +11,11 @@ const Appoinment = () => {
     }
 
     const color = {
-        color: 'black'
+        color: 'text-dark'
     }
 
     return (
-        <div>
+        <div className="">
             <NavBar color={color} />
             <AppoinmentHeader handleDateChange={handleDateChange} />
             <BookAppoinment date={selectedDate} />

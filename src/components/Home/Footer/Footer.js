@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row d-flex">
 
-                    <div className="col-md-3 p-4 pt-5">
+                    <div className="col-md-3 col-sm-6 p-4 pt-5">
                         <p>Emmergency Dental Care</p>
                         <p>Check Up</p>
                         <p>Treatment of Personal Deases</p>
@@ -29,7 +29,7 @@ const Footer = () => {
                     {
                         footertData.map(footer => <FooterData key={footer.id} data={footer} />)
                     }
-                    <div className="col-md-3 p-3">
+                    <div className="col-md-3 col-sm-6 p-3">
                         <h5 style={{ color: '#1CC7C1' }}>Our Address</h5>
                         <p>New Yorks-101010 Hudhon Yards</p>
                         <p>Call now..</p>

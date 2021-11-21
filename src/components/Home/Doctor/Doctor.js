@@ -1,29 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DoctorDetail from './DoctorDetail';
-import doctor from '../../../images/doctor.png';
 
-const doctors = [
-    {
-        id: '1',
-        name: 'Dr. Muhammad',
-        icon: doctor,
-        phone: '+1573751273',
-    },
-    {
-        id: '1',
-        name: 'Dr. Haris',
-        icon: doctor,
-        phone: '+1573899457',
-    },
-    {
-        id: '1',
-        name: 'Dr. Junnurain',
-        icon: doctor,
-        phone: '+1573834127',
-    },
-]
 
 const Doctor = () => {
+
+    const [doctors, setDoctors] = useState([]);
+
+    useEffect(() => {
+        fetch('https://stark-shore-06055.herokuapp.com/doctors')
+            .then((response) => response.json())
+            .then(data => setDoctors(data));
+    }, [doctors])
+
+
     return (
         <section className="doctor-section ">
             <div className="container text-center mt-5">

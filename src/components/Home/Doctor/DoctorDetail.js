@@ -11,9 +11,13 @@ const DoctorDetail = ({ doctor }) => {
     }
     return (
 
-        <div style={styles} className="col-md-3 p-3">
+        <div style={styles} className="col-md-4 col-sm-6 p-3">
             <div className="">
-                <img style={{ width: '100%', height: '200px' }} src={doctor.icon} alt="" />
+                {
+                    doctor.image ? <img style={{ width: '100%', height: '200px' }} src={`data:image/png;base64,${doctor.image.img}`} alt="" /> :
+                        <img style={{ width: '100%', height: '200px' }} src={`https://stark-shore-06055.herokuapp.com/${doctor.img}`} alt="" />
+                }
+
                 <div className="ms-2 mt-3 text-center">
                     <b><h4>{doctor.name}</h4></b>
                     <div className="d-flex   justify-content-center">

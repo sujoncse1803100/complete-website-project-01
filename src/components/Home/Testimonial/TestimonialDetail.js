@@ -9,7 +9,7 @@ const Testimonial = ({ patinet }) => {
     }
 
     return (
-        <div style={styles} className="col-md-3 p-2">
+        <div style={styles} className="col-md-3 col-sm-6 p-2">
             <p >{patinet.comment}</p>
             <div className="d-flex mt-5">
                 <img src={patinet.image} alt="" />
